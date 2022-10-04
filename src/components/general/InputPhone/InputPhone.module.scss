@@ -1,0 +1,103 @@
+/* stylelint-disable selector-max-compound-selectors */
+@import '../../../styles/constants';
+@import '../../../styles/colors';
+
+.inputPhone {
+  min-height: inherit;
+  width: 343px;
+  .phone-input-container {
+    .form-control + div::before {
+      display: none;
+    }
+  }
+
+  :global {
+    .input-phone__container.react-tel-input {
+      min-height: inherit;
+
+      .country-list {
+        top: 112%;
+        right: 0;
+        left: 0;
+        width: 343px;
+        margin-top: 2px;
+        animation: mount $anim-time;
+      }
+
+      .special-label {
+        display: none;
+      }
+
+      .form-control {
+        width: 100%;
+        height: initial;
+        min-height: inherit;
+        padding: 0 16px 0 44px;
+        padding-left: 74px;
+        color: var(--textPrimary);
+        background-color: var(--bgPrimary);
+        border: 1px solid $gray-200;
+        border-radius: $border-radius;
+
+        &::placeholder {
+          color: $gray-300;
+        }
+
+        &:focus {
+          border-color: $primary;
+          box-shadow: none;
+        }
+        &:read-only {
+          color: $black;
+          background-color: $gray-200;
+          cursor: auto;
+        }
+        &:disabled {
+          cursor: not-allowed;
+          color: $gray-300;
+          background-color: $gray-200;
+        }
+      }
+
+      // .flag-dropdown {
+      //   position: static;
+      // }
+
+      .form-control + div::before {
+        // display: none;
+      }
+
+      .selected-flag .arrow {
+        left: 30px;
+        top: 2px;
+        width: 25px;
+        height: 20px;
+        background-size: cover;
+        background: url('/icons/svg/arrow_down.svg') no-repeat;
+        border: 0;
+        border-right: 1px solid $gray-200;
+      }
+
+      .selected-flag .arrow.up {
+        border: 0;
+      }
+
+      .selected-flag {
+        position: static;
+      }
+    }
+  }
+}
+.inputPhone__error {
+  :global {
+    .input-phone__container.react-tel-input {
+      .form-control {
+        border: 1px solid $red;
+        &:focus {
+          border-color: $red;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}

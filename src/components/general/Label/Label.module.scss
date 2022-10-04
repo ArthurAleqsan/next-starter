@@ -1,0 +1,45 @@
+@import '../../../styles/colors.scss';
+
+.label {
+  display: inline-flex;
+  border-radius: 4px;
+  padding: 0 4px;
+  height: 24px;
+  line-height: 24px;
+  &_text {
+    color: $white;
+    font-weight: 600;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  &_new {
+    background-color: $blue-4;
+  }
+  &_done {
+    background-color: $green;
+  }
+  &_inprogress {
+    background-color: $blue-2;
+  }
+  &_closed {
+    background-color: $green-1;
+  }
+  &_open {
+    background-color: $blue-3;
+  }
+  &_needmileage {
+    background-color: $purple;
+  }
+  &_used {
+    background-color: $green-2;
+  }
+  &_mileagereached {
+    background-color: $yellow;
+  }
+  &_torepair {
+    background-color: $orange-2;
+  }
+  &_toscrap {
+    background-color: $green-2;
+  }
+}

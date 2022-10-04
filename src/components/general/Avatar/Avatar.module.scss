@@ -1,0 +1,63 @@
+@import '../../../styles/constants';
+@import '../../../styles/mixins';
+@import '../../../styles/colors';
+
+.container {
+  display: flex;
+  align-items: center;
+  .avatarname {
+    color: $gray-300;
+    font-weight: 600;
+    font-size: 12px;
+    &_commment {
+      color: $black;
+      font-size: 14px;
+    }
+  }
+}
+
+.avatar {
+  @include center;
+  overflow: hidden;
+  cursor: default;
+  border-radius: 50%;
+  border-radius: 50%;
+  margin-right: 6px;
+
+  &_name {
+  }
+
+  &_withBorder {
+    border: 2px solid var(--borderPrimary);
+    transition: border-color $anim-time-fast;
+
+    &:hover {
+      border-color: var(--borderDark);
+    }
+  }
+
+  &_withClick {
+    cursor: pointer;
+  }
+
+  &_xs {
+    width: 16px;
+    min-width: 16px;
+    height: 16px;
+    min-height: 16px;
+  }
+
+  &_sm {
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    min-height: 24px;
+  }
+
+  &_lg {
+    width: 36px;
+    min-width: 36px;
+    height: 36px;
+    min-height: 36px;
+  }
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "title": "pages.dashboard",
+    "icon": "dashboard",
+    "activeIcon": "dashboardActive",
+    "route": "/main/dashboard"
+  },
+  {
+    "title": "pages.events",
+    "icon": "events",
+    "activeIcon": "eventsActive",
+    "route": "/main/events"
+  },
+  {
+    "title": "pages.maintenance.title",
+    "icon": "maintenance",
+    "activeIcon": "maintenanceActive",
+    "route": "/main/maintenance"
+  },
+  {
+    "title": "pages.tasks",
+    "icon": "tasks",
+    "activeIcon": "tasksActive",
+    "route": "/main/tasks"
+  },
+  {
+    "title": "pages.cars.title",
+    "icon": "cars",
+    "activeIcon": "carsActive",
+    "route": "/main/cars"
+  },
+  {
+    "title": "pages.car_parts.title",
+    "icon": "carParts",
+    "activeIcon": "carPartsActive",
+    "route": "/main/car-parts"
+  },
+  {
+    "title": "pages.profile.title",
+    "icon": "profile",
+    "activeIcon": "profileActive",
+    "route": "/main/profile"
+  },
+  {
+    "title": "pages.notifications",
+    "icon": "notifications",
+    "activeIcon": "notificationsActive",
+    "route": "/main/notification"
+  }
+]

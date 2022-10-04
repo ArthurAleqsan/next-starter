@@ -1,0 +1,62 @@
+@import './colors';
+
+@mixin text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin svg-size($size) {
+  > div {
+    width: $size;
+    height: $size;
+
+    > div {
+      width: $size;
+      height: $size;
+    }
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@mixin svg-color($color) {
+  svg {
+    path {
+      fill: $color;
+    }
+  }
+}
+@mixin tableHeaderStyle() {
+  .inputBackground {
+    input {
+      background-color: $gray-50;
+    }
+    :global {
+      .select {
+        min-height: inherit;
+
+        &__control {
+          background: $gray-50;
+          border: 1px solid $gray-200;
+
+          &:hover {
+            border: 1px solid $gray-200;
+          }
+          &--is-focused {
+            border: 1px solid $primary;
+          }
+        }
+      }
+    }
+  }
+}

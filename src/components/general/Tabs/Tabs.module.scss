@@ -1,0 +1,70 @@
+@import '../../../styles/colors.scss';
+
+.tabs {
+  position: relative;
+  &_primary {
+    display: flex;
+    flex-grow: 1;
+    border-bottom: 1px solid $black;
+    &_divider {
+      height: 2px;
+      background-color: $primary;
+      position: absolute;
+      bottom: -1px;
+      transition: all 0.1s linear;
+    }
+    &_item {
+      height: 28px;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+      &_title {
+        font-weight: 600;
+        font-size: 14px;
+        color: $black;
+        text-align: center;
+        &_active {
+          color: $primary;
+        }
+      }
+    }
+  }
+  &_secondary {
+    display: inline-flex;
+    height: 40px;
+    background-color: $gray-50;
+    border-radius: 6px;
+    padding: 5px 6px;
+    &_item {
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.1s linear;
+      padding: 0 12px;
+      margin: 0 5px;
+      &_active {
+        box-shadow: 0px 10px 13px rgba(17, 38, 146, 0.05);
+        background-color: $white;
+      }
+      &_title {
+        font-weight: 600;
+        font-size: 14px;
+        color: $gray-300;
+        &_active {
+          color: $black;
+        }
+      }
+      &_icon {
+        width: 21px;
+        height: 21px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 12px;
+      }
+    }
+  }
+}

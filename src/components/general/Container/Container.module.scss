@@ -1,0 +1,39 @@
+@import '../../../styles/colors.scss';
+
+.container {
+  width: 100%;
+  &_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    margin-bottom: 20px;
+    &_title {
+      font-weight: 700;
+      font-size: 24px;
+      color: $black;
+      margin-right: 100px;
+    }
+    &_left {
+      display: flex;
+      align-items: center;
+      &_back {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        .arrow_back_text {
+          margin-left: 8px;
+          margin-right: 24px;
+          font-weight: 600;
+          font-size: 16px;
+          color: $primary;
+        }
+      }
+    }
+    &_right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+}

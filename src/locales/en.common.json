@@ -1,0 +1,35 @@
+{
+  "pages": {
+    "notifications": "Notifications",
+    "logout": "Logout",
+    "back": "Back"
+  },
+
+  "forms": {
+    "sign-in-form": {
+      "title": "Sign in"
+    }
+  },
+
+  "layout": {
+    "language-name-en": "En"
+  },
+  "buttons": {
+    "save": "Save",
+    "changepassword": "Change password",
+    "edit": "Edit",
+    "create": "Create",
+    "cancel": "Cancel",
+    "next": "Next",
+    "back": "Back",
+    "delete": "Delete"
+  },
+  "tabs": {
+    "current": "Current",
+    "history": "History"
+  },
+  "others": {
+    "readAll": "Read all"
+  },
+  "filters": {}
+}

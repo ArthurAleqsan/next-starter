@@ -1,0 +1,29 @@
+@import '../../../../styles/constants';
+
+.modalHeader {
+  &_icon {
+    margin-right: 8px;
+  }
+  &_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+    &_close {
+      justify-content: space-between;
+    }
+  }
+  &__closeBtn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 10;
+    cursor: pointer;
+    transition: color $anim-time;
+
+    &:hover {
+      color: var(--textDark);
+    }
+  }
+}

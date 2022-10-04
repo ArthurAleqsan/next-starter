@@ -1,0 +1,40 @@
+@import '../../../styles/colors.scss';
+
+.notify {
+  width: 100%;
+  max-width: 352px;
+  height: 55px;
+  background-color: $gray-50;
+  padding: 9px 50px 9px 22px;
+  position: relative;
+  border-radius: 4px;
+  &_active {
+    border: 1px solid $primary;
+  }
+  &_trash {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+  }
+  &_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &_from {
+    color: $gray-300;
+    font-weight: 600;
+    font-size: 12px;
+    margin-left: 10px;
+  }
+  &_name {
+    color: $black;
+    font-weight: 600;
+    font-size: 12px;
+  }
+  &_date {
+    color: $gray-300;
+    font-weight: 400;
+    font-size: 12px;
+  }
+}

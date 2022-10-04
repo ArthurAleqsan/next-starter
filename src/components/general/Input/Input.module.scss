@@ -1,0 +1,195 @@
+@import '../../../styles/constants';
+@import '../../../styles/mixins';
+@import '../../../styles/colors';
+
+.input {
+  position: relative;
+  min-height: inherit;
+  margin: 10px 0;
+
+  input {
+    width: 100%;
+    padding: 0 16px;
+    color: $black;
+    border: 1px solid $gray-200;
+    border-radius: $border-radius;
+    outline: none;
+    box-shadow: none;
+    transition: border-color $anim-time-fast, background-color $anim-time-fast, opacity $anim-time;
+    -webkit-appearance: none;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+
+    &::placeholder {
+      color: $gray-300;
+      font-size: 14px;
+    }
+
+    &:focus {
+      border-color: $primary;
+      box-shadow: none;
+    }
+    &:read-only {
+      color: $black;
+      background-color: $gray-200;
+      cursor: auto;
+    }
+    &:disabled {
+      cursor: not-allowed;
+      color: $gray-300;
+      background-color: $gray-200;
+    }
+  }
+
+  &__rightBlock {
+    &_xs {
+      input {
+        padding-right: 28px;
+      }
+    }
+
+    &_sm {
+      input {
+        padding-right: 36px;
+      }
+    }
+
+    &_md {
+      input {
+        padding-right: 44px;
+      }
+    }
+
+    &_lg {
+      input {
+        padding-right: 52px;
+      }
+    }
+    &_left {
+      left: 0;
+    }
+  }
+  .input_currency {
+    padding: 0 15px;
+    border-left: 1px solid $gray-200;
+    margin-left: 14px;
+  }
+  .iconContainer {
+    margin: 0 15px;
+  }
+  &_error {
+    input {
+      border-color: $red;
+      &:focus {
+        border-color: $red;
+        box-shadow: none;
+      }
+    }
+    .errorMessage {
+      position: relative;
+    }
+  }
+
+  &__rightBlock {
+    @include center;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 100%;
+    transform: translateY(-50%);
+
+    &_xs {
+      width: 28px;
+    }
+
+    &_sm {
+      width: 36px;
+    }
+
+    &_md {
+      width: fit-content;
+      height: 40px;
+      bottom: 0;
+      top: unset;
+      transform: unset;
+    }
+
+    &_lg {
+      width: 52px;
+    }
+    &_left {
+      left: 0;
+      top: 0;
+    }
+  }
+  &_size {
+    &__lg {
+      width: 500px;
+    }
+    &__md {
+      width: 343px;
+    }
+    &_sm {
+      width: 232px;
+    }
+  }
+  input[type='number'] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+
+  .numberInput {
+    border: 2px solid #ddd;
+    display: inline-flex;
+  }
+
+  .numberInput,
+  .numberInput * {
+    box-sizing: border-box;
+  }
+
+  .numberInput button {
+    outline: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+  }
+
+  .numberInput button {
+    &::before {
+      position: absolute;
+      content: '';
+      width: 1rem;
+      height: 2px;
+      background-color: #212121;
+      transform: translate(-50%, -50%);
+      top: 10%;
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      width: 1rem;
+      height: 2px;
+      background-color: #212121;
+      transform: translate(-50%, -50%);
+      bottom: 10%;
+    }
+  }
+  .numberInput button.plus:after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+}

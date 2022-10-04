@@ -1,0 +1,30 @@
+@import '../../../styles/colors.scss';
+
+.progress {
+  width: 100%;
+  height: 6px;
+  border-radius: 10px;
+  background-color: $gray-100;
+  position: relative;
+  overflow: hidden;
+  &_line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 6px;
+    border-radius: 10px;
+    transition: all 0.2s linear;
+    &_orange {
+      background-color: $orange;
+    }
+    &_blue {
+      background-color: $primary;
+    }
+    &_red {
+      background-color: $red;
+    }
+    &_green {
+      background-color: $green;
+    }
+  }
+}

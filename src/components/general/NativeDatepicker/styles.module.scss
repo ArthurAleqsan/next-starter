@@ -1,0 +1,44 @@
+@import '../../../styles/constants';
+@import '../../../styles/mixins';
+@import '../../../styles/colors';
+
+.nativeDatepicker {
+  margin: 10px 0;
+  input {
+    width: 100%;
+    padding: 0 16px;
+    color: $black;
+    border: 1px solid $gray-200;
+    border-radius: $border-radius;
+    outline: none;
+    box-shadow: none;
+    transition: border-color $anim-time-fast, background-color $anim-time-fast, opacity $anim-time;
+    -webkit-appearance: none;
+    height: 52px;
+    background-color: transparent;
+    &.lg {
+      width: 500px;
+    }
+    &.md {
+      width: 343px;
+    }
+    &::placeholder {
+      color: $gray-300;
+    }
+
+    &:focus {
+      border-color: $primary;
+      box-shadow: none;
+    }
+    &:read-only {
+      color: $black;
+      background-color: $gray-200;
+      cursor: auto;
+    }
+    &:disabled {
+      cursor: not-allowed;
+      color: $gray-300;
+      background-color: $gray-200;
+    }
+  }
+}

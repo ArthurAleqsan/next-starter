@@ -1,0 +1,54 @@
+@import '../../../styles/colors.scss';
+
+.card {
+  background-color: $white;
+  padding: 24px;
+  box-shadow: 0px 10px 13px rgba(17, 38, 146, 0.05);
+  border-radius: 8px;
+  &_content {
+    transition: all 0.2s linear;
+    &_inActive {
+      height: 0;
+      overflow: hidden;
+    }
+  }
+  &_icon {
+    margin-right: 16px;
+    transform: rotate(180deg);
+    &_inActive {
+      transform: rotate(0);
+    }
+  }
+  &_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    &_collapse {
+      border-bottom: 1px solid $gray-100;
+      padding-bottom: 10px;
+    }
+    &_inActive {
+      border: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+  &_titleBlock {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+  &_title {
+    font-weight: 600;
+    font-size: 16px;
+    color: $black;
+    margin-right: 12px;
+    &_border {
+      border-bottom: 1px solid $gray-100;
+      padding-bottom: 10px;
+      width: 100%;
+      display: block;
+    }
+  }
+}

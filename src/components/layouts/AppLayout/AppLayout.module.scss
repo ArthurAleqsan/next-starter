@@ -1,0 +1,10 @@
+.applayout {
+  display: flex;
+  .pagecontent {
+    display: flex;
+    flex-grow: 1;
+    padding: 25px;
+    height: 100vh;
+    overflow-y: auto;
+  }
+}
